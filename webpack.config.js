@@ -18,9 +18,19 @@ module.exports = {
             inject: true
         })
     ],
+    
+    resolve: {
+        extensions: ['.jsx', '.js']
+    },
 
     module: {
         rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            },
+
             {
                 test: /\.s[ac]ss$/,
                 use: [
@@ -29,6 +39,7 @@ module.exports = {
                     'sass-loader'
                 ]
             },
+
             {
                 test: /\.html$/,
                 use: ['html-loader']
