@@ -1,0 +1,10 @@
+body {
+    font-family: system-ui;
+}
+h1 {
+    color: teal;
+}
+.your-name img {
+    width: 100%;
+    height: auto;
+}
