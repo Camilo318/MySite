@@ -1,9 +1,22 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const Header = () => {
+    const header = React.createRef(null)
+
+    useEffect(() => {
+        gsap.from(header.current, {
+            duration: 1,
+            opacity: 0,
+            y:16,
+            ease: 'power3.inOut',
+            delay: 1
+        })
+    }, [])
+
+
     return (
         <header>
-            <div className="header-container">
+            <div className="header-container" ref={header}>
                 <div className="header__logo">
                     CP Blohsh.
                 </div>
