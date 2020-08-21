@@ -1,16 +1,16 @@
-:root {
-    --primary-color: #1e2022;
-    --text-color: #e0e3e8;
-    --small: 425px;
-    --tablet: 768px;
-}
+@import './Variables.scss';
 
 .header-container {
-    background-color: var(--primary-color);
+    
     padding: 20px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
     @media (min-width: 768px) {
         padding: 20px 30px;
     }
@@ -35,7 +35,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         display: none;
         @media (min-width: 768px) {
