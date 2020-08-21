@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Banner from './Banner'
+import Work from './Work'
 
 const App = () => {
     return (
@@ -8,7 +9,7 @@ const App = () => {
             <Header />
             <main>
                 <Banner />
-
+                <Work />
             </main>
         </>
     )

@@ -1,3 +1,5 @@
+@import './Variables.scss';
+
 * {
     box-sizing: border-box;
 }
@@ -8,3 +10,4 @@ body {
 
 @import './Header.scss';
 @import './Banner.scss';
+@import './Work.scss';
