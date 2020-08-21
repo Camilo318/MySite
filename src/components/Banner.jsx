@@ -3,9 +3,13 @@ import React, { useEffect } from 'react'
 const Banner = () => {
     const bannerBg = React.createRef(null)
     const bannerBgAddition = React.createRef(null)
+    const bannerH1 = React.createRef(null)
+    const bannerH3 = React.createRef(null)
+    const bannerButton = React.createRef(null)
+    const bannerTL = gsap.timeline()
+
     useEffect(() => {
-        console.log(bannerBg.current)
-        gsap.from([bannerBg.current, bannerBgAddition.current], {
+        bannerTL.from([bannerBg.current, bannerBgAddition.current], {
             duration: 1.2,
             width: 0,
             skewX: 4,
@@ -13,6 +17,16 @@ const Banner = () => {
             stagger: {
                 amount: 0.2
             }
+        })
+        .from([bannerH1.current, bannerH3.current, bannerButton.current], {
+            duration: 0.9,
+            delay: -0.2,
+            y:80,
+            opacity: 0,
+            stagger: {
+                amount: 0.3
+            },
+            ease: 'power3.out'
         })
     }, [])
 
@@ -27,14 +41,16 @@ const Banner = () => {
 
             <div className="banner__container">
                 <div className="banner__inner">
-                    <h1>Hey, I'm Camilo</h1>
-                    <h3>
+                    <h1 ref={bannerH1}>
+                        Hey, I'm Camilo
+                    </h1>
+                    <h3 ref={bannerH3}>
                         I build Web Apps that deliver amazing experiences
                     </h3>
                     {/* <p>
                         I'm a Frontend Developer that also happens to study Mechatronics Engineering. I like technology, a lot
                     </p> */}
-                    <a href="/">My Work</a>
+                    <a href="/" ref={bannerButton}>My Work</a>
                 </div>
             </div>
         </section>

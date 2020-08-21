@@ -5,10 +5,11 @@ const Header = () => {
 
     useEffect(() => {
         gsap.from(header.current, {
-            duration: 1,
+            duration: 0.8,
+            delay: -1,
             opacity: 0,
             y:16,
-            ease: 'power3.inOut',
+            ease: 'power3.out',
             delay: 1
         })
     }, [])
