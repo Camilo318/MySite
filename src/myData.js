@@ -17,6 +17,12 @@ const data = () => {
             des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, debitis?',
             id: 3,
             color: '#42b883'
+        },
+        {
+            title: 'Tattly',
+            des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, debitis?',
+            id: 4,
+            color: '#ffaa71'
         }
     ]
 
