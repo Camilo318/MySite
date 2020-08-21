@@ -18,9 +18,9 @@
     padding: 15px;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 15px;
     @media (min-width: 768px) {
         grid-template-columns: 1fr 1fr;
-        gap: 15px;
+        gap: 20px;
     }
 }

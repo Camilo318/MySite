@@ -11,8 +11,19 @@
     color: var(--text-color);
     display: flex;
     flex-direction: column;
+    @media (min-width: 768px) {
+        padding: 20px;
+    }
 }
 
+.work__img {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    img {
+        width: 100%;
+    }
+}
 .work__description {
     h3 {
         font-family: 'Space Mono';
