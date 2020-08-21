@@ -1,0 +1,24 @@
+.work__item {
+    border-radius: 8px;
+    transition: all 0.3s;
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+.work__inner {
+    padding: 10px;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.work__description {
+    h3 {
+        font-family: 'Space Mono';
+    }
+    p {
+        font-family: 'Poppins';
+        font-size: 1rem;
+    }
+}
