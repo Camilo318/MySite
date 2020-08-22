@@ -25,10 +25,19 @@ const Header = () => {
                 <div className="header__navigation">
                     <nav>
                         <ul>
-                            <li><a href="">Work</a></li>
+                            <li><a href="#work">Work</a></li>
                             <li><a href="">About</a></li>
-                            <li><a href="">Resume</a></li>
-                            <li><a href="">Email</a></li>
+                            <li>
+                                <a href="https://drive.google.com/file/d/1PB9ZM8wDjlrmMWG17P60QXCwUPsnxA7s/view?usp=sharing" target='__blank'>
+                                    Resume
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="mailto:camiloa0318@gmail.com?subject=Hi there!">
+                                    Email
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>

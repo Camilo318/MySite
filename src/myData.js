@@ -1,7 +1,7 @@
 const data = () => {
     const works = [
         {
-            title: 'Pokemon Game Card',
+            title: 'Pokemon Card Game',
             des: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, facilis!',
             id: 1,
             color: '#ea5455',
