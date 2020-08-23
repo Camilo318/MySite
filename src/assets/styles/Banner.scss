@@ -33,6 +33,7 @@
 .banner__inner {
     position: relative;
     h1 {
+        visibility: hidden;
         font-family: 'Space Mono';
         margin: 1rem 0;
         @media (min-width: 768px) {
@@ -40,6 +41,7 @@
         }
     }
     h3 {
+        visibility: hidden;
         font-family: 'Poppins';
         font-weight: 400;
         @media (min-width: 768px) {
@@ -52,6 +54,7 @@
         font-size: 0.875rem;
     }
     a {
+        visibility: hidden;
         display: inline-block;
         text-decoration: none;  
         color: var(--text-color);
