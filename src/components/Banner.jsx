@@ -9,15 +9,21 @@ const Banner = () => {
     const bannerTL = gsap.timeline()
 
     useEffect(() => {
-        bannerTL.from([bannerBg.current, bannerBgAddition.current], {
-            duration: 1.2,
-            width: 0,
-            skewX: 4,
-            ease: 'power3.inOut',
-            stagger: {
-                amount: 0.2
+        bannerTL.fromTo([bannerBg.current, bannerBgAddition.current],
+            {
+                width: 0,
+                skewX: 4,
+            },
+            {
+                skewX: 0,
+                width:'100%',
+                ease: 'power3.inOut',
+                duration: 1.2,
+                stagger: {
+                    amount: 0.2
+                }      
             }
-        })
+        )
         .from([bannerH1.current, bannerH3.current, bannerButton.current], {
             duration: 0.9,
             delay: -0.2,
