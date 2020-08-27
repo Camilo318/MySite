@@ -57,7 +57,7 @@ const Banner = () => {
                     {/* <p>
                         I'm a Frontend Developer that also happens to study Mechatronics Engineering. I like technology, a lot
                     </p> */}
-                    <a href="/" ref={bannerButton}>My Work</a>
+                    <a href="#work" ref={bannerButton}>My Work</a>
                 </div>
             </div>
         </section>
