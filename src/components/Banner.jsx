@@ -26,7 +26,7 @@ const Banner = () => {
         )
         .from([bannerH1.current, bannerH3.current, bannerButton.current], {
             autoAlpha: 0,
-            delay: -0.2,
+            delay: 0.2,
             duration: 0.9,
             y:80,
             opacity: 0,

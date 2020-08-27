@@ -6,12 +6,11 @@ const Header = () => {
     useEffect(() => {
         gsap.from(header.current, {
             autoAlpha: 0,
+            delay: 1,
             duration: 1,
-            delay: -1,
             opacity: 0,
             y:16,
-            ease: 'power3.inOut',
-            delay: 1
+            ease: 'power3.inOut'
         })
     }, [])
 
