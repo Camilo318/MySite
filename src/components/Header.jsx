@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     const header = React.createRef(null)
@@ -25,8 +26,12 @@ const Header = () => {
                 <div className="header__navigation">
                     <nav>
                         <ul>
-                            <li><a href="#work">Work</a></li>
-                            <li><a href="">About</a></li>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/about">About</Link>
+                            </li>
                             <li>
                                 <a href="https://drive.google.com/file/d/1PB9ZM8wDjlrmMWG17P60QXCwUPsnxA7s/view?usp=sharing" target='__blank'>
                                     Resume

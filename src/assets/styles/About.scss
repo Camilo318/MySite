@@ -1,0 +1,35 @@
+.about {
+    position: relative;
+    background: var(--primary-color);
+    margin: 0;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about__container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px;
+    margin: 0 auto;
+    color: var(--text-color);
+    font-size: 1rem;
+    h2 {
+        visibility: hidden;
+        font-family: 'Space Mono';
+        margin-top: 100px;
+        font-size: 1.5em;
+    }
+    p {
+        visibility: hidden;
+        margin: 10px 0;
+        span {
+            font-family: 'Poppins';
+            font-size: 1em;
+        }
+    }
+    @media (min-width: 768px) {
+        font-size: 1.3rem;
+    }
+}
