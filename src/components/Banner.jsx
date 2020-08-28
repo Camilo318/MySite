@@ -20,7 +20,7 @@ const Banner = () => {
                 ease: 'power3.inOut',
                 duration: 1.2,
                 stagger: {
-                    amount: 0.2
+                    amount: 0.3
                 }      
             }
         )

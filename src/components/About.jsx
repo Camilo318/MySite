@@ -4,23 +4,33 @@ import Header from './Header'
 const line1 = React.createRef(null)
 const line2 = React.createRef(null)
 const aboutH2 = React.createRef(null)
+const aboutBg = React.createRef(null)
+const aboutBgAddition = React.createRef(null)
+
 const aboutTL = gsap.timeline()
 const About = () => {
 
     useEffect(() => {
-        aboutTL.from(aboutH2.current, {
-            delay: 1.2,
-            autoAlpha: 0,
-            duration: 0.6,
-            opacity: 0,
-            y: 30
-        })
-        .from([line1.current, line2.current], {
+        aboutTL.fromTo([aboutBg.current, aboutBgAddition.current],
+            {   
+                width: 0,
+                skewX: 4
+            },
+            {
+                width: '100%',
+                skewX: 0,
+                duration: 1,
+                stagger: 0.3,
+                ease: 'power3.inOut'
+            }
+        )
+        .from([aboutH2.current, line1.current, line2.current], {
             autoAlpha: 0,
             y: 30,
             opacity: 0,
-            duration: 0.8,
-            ease: 'power3.out'
+            duration: 1,
+            ease: 'power3.out',
+            stagger: 0.3
         })
         
     },[])
@@ -28,6 +38,9 @@ const About = () => {
         <>
             <Header />
             <section className="about">
+                <div className="about__bg" ref={aboutBg}></div>
+                <div className="about__bg--addition" ref={aboutBgAddition}></div>
+
                 <div className="about__container">
                     <h2 ref={aboutH2}>
                         Hi there, I'm Camilo Perilla

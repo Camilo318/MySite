@@ -8,6 +8,20 @@
     justify-content: center;
 }
 
+.about__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: slateblue;
+    transform-origin: right center;
+    &--addition {
+        @extend .about__bg;
+        background-color: var(--primary-color);
+    }
+}
+
+
 .about__container {
     width: 100%;
     max-width: 1200px;

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
     const header = React.createRef(null)
-
     useEffect(() => {
         gsap.from(header.current, {
             autoAlpha: 0,
