@@ -1,13 +1,16 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
 
 
 module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: './'
     },
 
     devServer: {
@@ -20,6 +23,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html',
             inject: true
+        }),
+        new MiniCssExtractPlugin({
+            filename:'[name].css'
         })
     ],
     
@@ -38,7 +44,7 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/,
                 use: [
-                    'style-loader',
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader'
                 ]
