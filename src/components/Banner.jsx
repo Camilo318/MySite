@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-
+import ray from '../assets/images/ray.png'
 const Banner = () => {
     const bannerBg = React.createRef(null)
     const bannerBgAddition = React.createRef(null)
@@ -56,6 +56,9 @@ const Banner = () => {
                     </h3>
                     
                     <a href="javascript:void(0)" ref={bannerButton}>My Work</a>
+                </div>
+                <div className="banner__image">
+                    <img src={ray} alt=""/>
                 </div>
             </div>
         </section>
