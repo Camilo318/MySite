@@ -1,21 +1,25 @@
 .banner {
     position: relative;
-    height: 80vh;
+    height: 90vh;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     background-color: var(--primary-color);
+    @media (min-width: 768px) {
+        align-items: flex-end;
+    }
 }
 
 .banner__container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 15px;
     color: var(--text-color);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     @media (min-width: 768px) {
         padding: 15px 30px;
+        flex-direction: row;
     }
 }
 
@@ -35,7 +39,9 @@
 
 .banner__inner {
     position: relative;
-    width: 60%;
+    @media (min-width: 768px) {
+        width: 50%;
+    }
     h1 {
         visibility: hidden;
         font-family: 'Space Mono';
@@ -75,10 +81,17 @@
 }
 
 .banner__image {
+    display: none;
+    visibility: hidden;
     position: relative;
     width: 40%;
+    align-self: center;
     img {
         width: 100%;
         height: auto;
+    }
+
+    @media (min-width: 768px) {
+        display: block;
     }
 }

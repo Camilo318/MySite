@@ -6,6 +6,7 @@ const Banner = () => {
     const bannerH1 = React.createRef(null)
     const bannerH3 = React.createRef(null)
     const bannerButton = React.createRef(null)
+    const Image = React.createRef(null)
     const bannerTL = gsap.timeline()
 
     useEffect(() => {
@@ -35,6 +36,14 @@ const Banner = () => {
             },
             ease: 'power3.out'
         })
+
+        gsap.from(Image.current, {
+            delay: 1,
+            autoAlpha:0,
+            duration: 0.8,
+            opacity: 0,
+            y: 100,
+        })
     }, [])
 
     return (
@@ -57,7 +66,7 @@ const Banner = () => {
                     
                     <a href="javascript:void(0)" ref={bannerButton}>My Work</a>
                 </div>
-                <div className="banner__image">
+                <div className="banner__image" ref={Image}>
                     <img src={ray} alt=""/>
                 </div>
             </div>
