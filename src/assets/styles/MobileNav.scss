@@ -1,4 +1,12 @@
 .mobile-nav {
+    span {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: var(--text-color);
+        font-size: 2rem;
+        cursor: pointer;
+    }
     position: fixed;
     z-index: 2;
     top: 0;

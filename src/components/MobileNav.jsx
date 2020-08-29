@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const MobileNav = ({open}) => {
+const MobileNav = ({open, menu}) => {
     const navigation = React.createRef(null)
+    const closeMenu = () => {
+        menu()
+    }
 
     useEffect(() => {
         if (open === true) {
@@ -12,7 +15,8 @@ const MobileNav = ({open}) => {
                 duration: 1,
                 ease: 'power3.out'
             })
-        } else {
+        } else if (open === false){
+            console.log('Close')
             gsap.to(navigation.current, {
                 x: '100%',
                 duration: 1,
@@ -22,6 +26,7 @@ const MobileNav = ({open}) => {
     }, [open])
     return (
         <div className='mobile-nav' ref={navigation}>
+            <span onClick={closeMenu}>&times;</span>
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>

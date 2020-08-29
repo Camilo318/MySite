@@ -5,6 +5,10 @@ import MobileNav from './MobileNav'
 const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false)
+    const setMenu = () => {
+        setIsOpen(!isOpen)
+    }
+
     const header = React.createRef(null)
     useEffect(() => {
         gsap.from(header.current, {
@@ -52,7 +56,7 @@ const Header = () => {
                     <span></span>
                 </div>
             </div>
-            <MobileNav open={isOpen}/>
+            <MobileNav open={isOpen} menu={setMenu}/>
         </header>
     )
 }
