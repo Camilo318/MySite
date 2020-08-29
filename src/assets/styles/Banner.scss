@@ -1,17 +1,14 @@
 .banner {
     position: relative;
-    height: 80vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     background-color: var(--primary-color);
-    // @media (min-width: 768px) {
-    //     align-items: flex-end;
-    // }
 }
 
 .banner__container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1290px;
     margin: 0 auto;
     padding: 15px;
     color: var(--text-color);
