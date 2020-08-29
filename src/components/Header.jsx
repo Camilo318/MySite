@@ -1,7 +1,10 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
+import MobileNav from './MobileNav'
 
 const Header = () => {
+
+    const [isOpen, setIsOpen] = useState(false)
     const header = React.createRef(null)
     useEffect(() => {
         gsap.from(header.current, {
@@ -13,7 +16,6 @@ const Header = () => {
             ease: 'power3.inOut'
         })
     }, [])
-
 
     return (
         <header>
@@ -45,11 +47,12 @@ const Header = () => {
                         </ul>
                     </nav>
                 </div>
-                <div className="header__menu">
+                <div className="header__menu" onClick={ () => setIsOpen(!isOpen)}>
                     <span></span>
                     <span></span>
                 </div>
             </div>
+            <MobileNav open={isOpen}/>
         </header>
     )
 }
