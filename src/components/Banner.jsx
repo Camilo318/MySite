@@ -38,7 +38,7 @@ const Banner = () => {
         })
 
         gsap.from(Image.current, {
-            delay: 1,
+            delay: 2,
             autoAlpha:0,
             duration: 0.8,
             opacity: 0,
