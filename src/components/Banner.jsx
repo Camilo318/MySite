@@ -55,7 +55,7 @@ const Banner = () => {
                         I build Web Apps that deliver amazing experiences
                     </h3>
                     
-                    <a href="#work" ref={bannerButton}>My Work</a>
+                    <a href="javascript:void(0)" ref={bannerButton}>My Work</a>
                 </div>
             </div>
         </section>

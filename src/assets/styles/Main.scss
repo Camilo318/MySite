@@ -6,10 +6,13 @@
 body {
     font-family: system-ui;
     margin: 0;
+    overflow-x: hidden;
 }
 
 @import './Header.scss';
 @import './Banner.scss';
 @import './Work.scss';
 @import './WorkItem.scss';
-@import './About.scss'
+@import './About.scss';
+@import './About.scss';
+@import './Footer.scss';

@@ -3,6 +3,7 @@ import Header from './Header'
 import Home from './Home'
 import About from './About'
 import { HashRouter, Route, Switch} from 'react-router-dom'
+import Footer from './Footer'
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                     <Route exact path="/about" component={About}/>
                 </Switch>
             </main>
+            <Footer />
         </HashRouter>
         
     )
