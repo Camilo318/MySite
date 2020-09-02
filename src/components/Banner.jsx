@@ -64,7 +64,7 @@ const Banner = () => {
                         I build Web Apps that deliver amazing experiences
                     </h3>
                     
-                    <a href="javascript:void(0)" ref={bannerButton}>My Work</a>
+                    <a href="/" ref={bannerButton}>My Work</a>
                 </div>
                 <div className="banner__image" ref={Image}>
                     <img src={ray} alt=""/>

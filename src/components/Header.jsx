@@ -51,12 +51,12 @@ const Header = () => {
                         </ul>
                     </nav>
                 </div>
-                <div className="header__menu" onClick={ () => setIsOpen(!isOpen)}>
+                <div className="header__menu" onClick={() => setIsOpen(!isOpen)}>
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <MobileNav open={isOpen} menu={setMenu}/>
+            <MobileNav isOpen={isOpen} setMenu={setMenu}/>
         </header>
     )
 }

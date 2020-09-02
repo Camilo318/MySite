@@ -8,12 +8,11 @@ import Footer from './Footer'
 const App = () => {
     return (
         <HashRouter>
-            <main>
-                <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route exact path="/about" component={About}/>
-                </Switch>
-            </main>
+            
+            <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/about" component={About}/>
+            </Switch>
             <Footer />
         </HashRouter>
         
