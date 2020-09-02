@@ -42,7 +42,7 @@ const Banner = () => {
             autoAlpha:0,
             duration: 0.8,
             opacity: 0,
-            y: 100,
+            x: -80,
         })
     }, [])
 
