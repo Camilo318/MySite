@@ -12,7 +12,7 @@ const data = () => {
             des: 'This is not other pokedex like the ones out there. It is a SPA made with Vanilla JS, so it is blazing fast and super responsive',
             id: 2,
             color: '#5026a7',
-            link: 'https://ultimatepokedex.netlify.app/'
+            link: 'https://pokehunt.netlify.app/#/'
         },
         {
             title: 'Movie Seat Picker',
