@@ -29,10 +29,26 @@ const MobileNav = ({isOpen, setMenu}) => {
             <span onClick={closeMenu}>&times;</span>
             <nav>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><a href="https://drive.google.com/file/d/1PB9ZM8wDjlrmMWG17P60QXCwUPsnxA7s/view?usp=sharing" target='__blank'>Resume</a></li>
-                    <li><a href="mailto:camiloa0318@gmail.com?subject=Hi there!">Email</a></li>
+                    <li>
+                        <Link to="/" onClick={closeMenu}>
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/about" onClick={closeMenu}>
+                            About
+                        </Link>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1PB9ZM8wDjlrmMWG17P60QXCwUPsnxA7s/view?usp=sharing" target='__blank' onClick={closeMenu}>
+                            Resume
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:camiloa0318@gmail.com?subject=Hi there!" onClick={closeMenu}>
+                            Email
+                        </a>
+                    </li>
                 </ul>
             </nav>
             
