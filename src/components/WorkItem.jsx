@@ -1,8 +1,8 @@
 import React from 'react'
-import pokedex from '../assets/images/pokedex.jpg'
-import pokecard from '../assets/images/pokecard.jpg'
-import booking from '../assets/images/booking.jpg'
-import tattly from '../assets/images/tattly.jpg'
+import pokedex from '../assets/images/pokehunt.webp'
+import pokecard from '../assets/images/Pokemon-Card.webp'
+import booking from '../assets/images/Booking.webp'
+import tattly from '../assets/images/Tattly.webp'
 
 
 const WorkItem = (props) => {
