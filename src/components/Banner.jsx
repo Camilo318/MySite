@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react'
-import ray from '../assets/images/ray.png'
+import Doraemon from '../assets/images/doraemon.webp'
+import twitter from '../assets/images/Twitter.svg'
+import link from '../assets/images/Link.svg'
+
 const Banner = () => {
     const bannerBg = React.createRef(null)
     const bannerBgAddition = React.createRef(null)
     const bannerH1 = React.createRef(null)
     const bannerH3 = React.createRef(null)
-    const bannerButton = React.createRef(null)
+    const bannerSocial = React.createRef(null)
     const Image = React.createRef(null)
     const bannerTL = gsap.timeline()
 
@@ -25,7 +28,7 @@ const Banner = () => {
                 }      
             }
         )
-        .from([bannerH1.current, bannerH3.current, bannerButton.current], {
+        .from([bannerH1.current, bannerH3.current, bannerSocial.current], {
             autoAlpha: 0,
             delay: 0.2,
             duration: 0.9,
@@ -40,9 +43,10 @@ const Banner = () => {
         gsap.from(Image.current, {
             delay: 2,
             autoAlpha:0,
-            duration: 0.8,
+            x: 100,
             opacity: 0,
-            x: -80,
+            duration: 0.8,
+            ease: 'power3.in'
         })
     }, [])
 
@@ -58,16 +62,23 @@ const Banner = () => {
             <div className="banner__container">
                 <div className="banner__inner">
                     <h1 ref={bannerH1}>
-                        Hey, I'm Camilo
+                        Hey, I am Camilo
                     </h1>
                     <h3 ref={bannerH3}>
                         I build Web Apps that deliver amazing experiences
                     </h3>
                     
-                    <a href="/" ref={bannerButton}>My Work</a>
+                    <div className="social" ref={bannerSocial}>
+                        <a href="">
+                            <img src={twitter} alt="twitter"/>
+                        </a>
+                        <a href="">
+                            <img src={link} alt="link"/>
+                        </a>
+                    </div>
                 </div>
                 <div className="banner__image" ref={Image}>
-                    <img src={ray} alt=""/>
+                    <img src={Doraemon} alt="Doraemon" title='Doraemon is the best thing ever!'/>
                 </div>
             </div>
         </section>
