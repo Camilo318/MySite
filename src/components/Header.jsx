@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useRef} from 'react'
 import { Link } from 'react-router-dom'
 import MobileNav from './MobileNav'
 
@@ -9,7 +9,7 @@ const Header = () => {
         setIsOpen(!isOpen)
     }
 
-    const header = React.createRef(null)
+    const header = useRef(null)
     useEffect(() => {
         gsap.from(header.current, {
             autoAlpha: 0,

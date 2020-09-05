@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 const MobileNav = ({isOpen, setMenu}) => {
-    const navigation = React.createRef(null)
+    const navigation = useRef(null)
     const closeMenu = () => {
         setMenu()
     }

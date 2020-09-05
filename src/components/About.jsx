@@ -1,14 +1,15 @@
-import React, { useEffect }from 'react'
+import React, { useEffect, useRef }from 'react'
 import Header from './Header'
 
-const line1 = React.createRef(null)
-const line2 = React.createRef(null)
-const aboutH2 = React.createRef(null)
-const aboutBg = React.createRef(null)
-const aboutBgAddition = React.createRef(null)
 
-const aboutTL = gsap.timeline()
 const About = () => {
+    const line1 = useRef(null)
+    const line2 = useRef(null)
+    const aboutH2 = useRef(null)
+    const aboutBg = useRef(null)
+    const aboutBgAddition = useRef(null)
+
+    const aboutTL = gsap.timeline()
 
     useEffect(() => {
         aboutTL.fromTo([aboutBg.current, aboutBgAddition.current],

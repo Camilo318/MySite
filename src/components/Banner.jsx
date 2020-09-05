@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Doraemon from '../assets/images/doraemon.webp'
 import twitter from '../assets/images/Twitter.svg'
 import link from '../assets/images/Link.svg'
 
 const Banner = () => {
-    const bannerBg = React.createRef(null)
-    const bannerBgAddition = React.createRef(null)
-    const bannerH1 = React.createRef(null)
-    const bannerH3 = React.createRef(null)
-    const bannerSocial = React.createRef(null)
-    const Image = React.createRef(null)
+    const bannerBg = useRef(null)
+    const bannerBgAddition = useRef(null)
+    const bannerH1 = useRef(null)
+    const bannerH3 = useRef(null)
+    const bannerSocial = useRef(null)
+    const Image = useRef(null)
     const bannerTL = gsap.timeline()
 
     useEffect(() => {
