@@ -3,12 +3,17 @@
     height: 90vh;
     display: flex;
     align-items: flex-end;
+    @media (min-width: 768px) {
+        align-items: center;
+    }
     background-color: var(--primary-color);
 }
 
 .banner__container {
     position: relative;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 15px;
     color: var(--text-color);
     display: flex;
@@ -36,6 +41,9 @@
 
 .banner__inner {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @media (min-width: 768px) {
         width: 50%;
     }
@@ -76,7 +84,6 @@
 }
 
 .banner__image {
-    display: none;
     visibility: hidden;
     position: relative;
     width: 40%;
@@ -84,9 +91,5 @@
     img {
         width: 100%;
         height: auto;
-    }
-
-    @media (min-width: 768px) {
-        display: block;
     }
 }
