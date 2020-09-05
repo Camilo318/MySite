@@ -1,16 +1,14 @@
 .banner {
-    position: relative;
-    height: 75vh;
+    position: relative;  //wrap the banner
+    height: 90vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     background-color: var(--primary-color);
 }
 
 .banner__container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 15px;
     color: var(--text-color);
     display: flex;
@@ -23,11 +21,11 @@
 }
 
 .banner__bg, .banner__bg--addition {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    height: 100%;
+    bottom: 0;
     background-color:slateblue;
 }
 
