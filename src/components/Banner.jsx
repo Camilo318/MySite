@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Doraemon from '../assets/images/doraemon.webp'
 import twitter from '../assets/images/Twitter.svg'
 import link from '../assets/images/Link.svg'
@@ -41,14 +41,28 @@ const Banner = () => {
         })
 
         gsap.from(Image.current, {
-            delay: 2,
             autoAlpha:0,
             x: 100,
             opacity: 0,
             duration: 0.8,
-            ease: 'power3.in'
+            ease: 'power3.in',
+            delay: 2
         })
     }, [])
+    const [dir, setDir] = useState(0)
+    const easterEgg = () => {
+        setDir(dir => 1 - dir)
+        console.log(dir)
+    }
+    useEffect(() => {
+        
+        gsap.to(Image.current, {
+            y: 100 * dir,
+            x: -500 * dir,
+            duration: 1,
+            ease: 'power3.inOut'
+        })
+    }, [dir])
 
     return (
         <section className="banner">
@@ -77,7 +91,7 @@ const Banner = () => {
                         </a>
                     </div>
                 </div>
-                <div className="banner__image" ref={Image}>
+                <div className="banner__image" ref={Image} onClick={easterEgg}>
                     <img src={Doraemon} alt="Doraemon" title='Doraemon is the best thing ever!'/>
                 </div>
             </div>
