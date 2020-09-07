@@ -2,14 +2,14 @@
     position: relative;
     background: var(--primary-color);
     margin: 0;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .about__bg {
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
     height: 100%;
@@ -23,6 +23,7 @@
 
 
 .about__container {
+    position: relative;
     width: 100%;
     max-width: 1200px;
     padding: 15px;

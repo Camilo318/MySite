@@ -48,7 +48,7 @@ const About = () => {
                     </h2>
                     <p ref={line1}>
                         <span >
-                            I'm a Frontend Developer that also happens to study Mechatronics Engineering. I like technology, a lot
+                            I'm a Frontend Developer that also happens to study Mechatronics Engineering. I like technology, a lot.
                         </span>
                     </p>
                     <p ref={line2}>
