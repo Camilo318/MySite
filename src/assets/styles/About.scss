@@ -39,12 +39,13 @@
         margin-top: 100px;
         font-size: 1.5em;
     }
-    p {
-        visibility: hidden;
+    h4 {
+        font-family: 'Poppins';
+        font-weight: 400;
         margin: 10px 0;
-        span {
-            font-family: 'Poppins';
-            font-size: 1em;
+        overflow: hidden;
+        .line {
+            visibility: hidden;
         }
     }
     @media (min-width: 768px) {

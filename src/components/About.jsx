@@ -20,8 +20,8 @@ const About = () => {
             {
                 width: '100%',
                 skewX: 0,
-                duration: 1,
-                stagger: 0.3,
+                duration: 1.2,
+                stagger: 0.2,
                 ease: 'power3.inOut'
             }
         )
@@ -29,9 +29,9 @@ const About = () => {
             autoAlpha: 0,
             y: 30,
             opacity: 0,
-            duration: 1,
+            duration: 0.8,
             ease: 'power3.out',
-            stagger: 0.3
+            stagger: 0.2
         })
         
     },[])
@@ -46,16 +46,18 @@ const About = () => {
                     <h2 ref={aboutH2}>
                         Hi there, I'm Camilo Perilla
                     </h2>
-                    <p ref={line1}>
-                        <span >
-                            I'm a Frontend Developer that also happens to study Mechatronics Engineering. I like technology, a lot.
-                        </span>
-                    </p>
-                    <p ref={line2}>
-                        <span >
-                            I strongly believe that technology is shaping our society, that's the reason why I don't simply consume it but also create it.
-                        </span>
-                    </p>
+                    <h4>
+                        <div ref={line1}>
+                            <span>
+                                I'm a Frontend Developer that also happens to study Mechatronics Engineering. I like technology, a lot.
+                            </span>
+                        </div>
+                        <div ref={line2}>
+                            <span >
+                                I strongly believe that technology is shaping our society, that's the reason why I don't simply consume it but also create it.
+                            </span>
+                        </div>
+                    </h4>
                 </div>
 
             </section>
