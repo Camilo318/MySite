@@ -2,10 +2,7 @@
     position: relative;  //wrap the banner
     height: 90vh;
     display: flex;
-    align-items: flex-end;
-    @media (min-width: 768px) {
-        align-items: center;
-    }
+    align-items: center;
     background-color: var(--primary-color);
 }
 
@@ -40,12 +37,14 @@
 
 
 .banner__inner {
+    order: 1;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     @media (min-width: 768px) {
         width: 50%;
+        order: 0;
     }
     h1 {
         visibility: hidden;
