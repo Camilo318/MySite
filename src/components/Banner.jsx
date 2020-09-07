@@ -11,7 +11,7 @@ const Banner = () => {
     const bannerSocial = useRef(null)
     const Image = useRef(null)
     const bannerTL = gsap.timeline()
-
+    
     useEffect(() => {
         bannerTL.fromTo([bannerBg.current, bannerBgAddition.current],
             {
@@ -46,24 +46,19 @@ const Banner = () => {
             opacity: 0,
             duration: 0.8,
             ease: 'power3.in',
-            delay: 2
+            delay: 1.5
+        })
+
+        Draggable.create(".banner__image", {
+            type: "x,y",
+            bounds: bannerBg.current,
+            onClick: () => console.log('Billie'),
+            onDragEnd: () => console.log('Eilish')
         })
     }, [])
-    const [dir, setDir] = useState(0)
-    const easterEgg = () => {
-        setDir(dir => 1 - dir)
-        console.log(dir)
-    }
-    useEffect(() => {
-        
-        gsap.to(Image.current, {
-            y: 100 * dir,
-            x: -500 * dir,
-            duration: 1,
-            ease: 'power3.inOut'
-        })
-    }, [dir])
 
+    
+    
     return (
         <section className="banner">
             <div className="banner__bg"
@@ -79,7 +74,8 @@ const Banner = () => {
                         Hey, I am Camilo
                     </h1>
                     <h3 ref={bannerH3}>
-                        I build Web Apps that deliver amazing experiences
+                        I build Web Apps that deliver amazing experiences.
+                        And yes, you saw right, that is flying Doraemon. Try to move it around
                     </h3>
                     
                     <div className="social" ref={bannerSocial}>
@@ -91,7 +87,7 @@ const Banner = () => {
                         </a>
                     </div>
                 </div>
-                <div className="banner__image" ref={Image} onClick={easterEgg}>
+                <div className="banner__image" ref={Image}>
                     <img src={Doraemon} alt="Doraemon" title='Doraemon is the best thing ever!'/>
                 </div>
             </div>
