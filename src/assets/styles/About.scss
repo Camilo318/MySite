@@ -44,8 +44,8 @@
         font-weight: 400;
         margin: 10px 0;
         overflow: hidden;
-        .line {
-            visibility: hidden;
+        div {
+            margin-bottom: 0.75rem;
         }
     }
     @media (min-width: 768px) {

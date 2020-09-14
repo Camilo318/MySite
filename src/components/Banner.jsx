@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import Doraemon from '../assets/images/doraemon.webp'
 import twitter from '../assets/images/Twitter.svg'
 import link from '../assets/images/Link.svg'
+import github from '../assets/images/GitHub.png'
 
 const Banner = () => {
     const bannerBg = useRef(null)
@@ -79,11 +80,16 @@ const Banner = () => {
                     </h3>
                     
                     <div className="social" ref={bannerSocial}>
-                        <a href="">
-                            <img src={twitter} alt="twitter"/>
+                        <a href="https://github.com/Camilo318"
+                        target='__blank'>
+                            <img src={github} alt="twitter"/>
                         </a>
                         <a href="">
                             <img src={link} alt="link"/>
+                        </a>
+                        <a href="https://twitter.com/GlutenFree318"
+                        target='__blank'>
+                            <img src={twitter} alt="link"/>
                         </a>
                     </div>
                 </div>

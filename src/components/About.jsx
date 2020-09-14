@@ -26,6 +26,7 @@ const About = () => {
             }
         )
         .from([aboutH2.current, line1.current, line2.current], {
+            delay: 0.2,
             autoAlpha: 0,
             y: 30,
             opacity: 0,
@@ -59,7 +60,6 @@ const About = () => {
                         </div>
                     </h4>
                 </div>
-
             </section>
         </>
     )
