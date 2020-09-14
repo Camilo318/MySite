@@ -19,7 +19,7 @@ const data = () => {
             des: 'A very simple UI for picking seats in the cinema. Every movie has its own seats with selected, occupied and free options.',
             id: 3,
             color: '#42b883',
-            link: 'https://movie-seat-booking-app-blohsh.netlify.app/'
+            link: 'https://movie-seat-app.netlify.app/'
         },
         {
             title: 'Tattly',
