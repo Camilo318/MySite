@@ -6,7 +6,7 @@ import tattly from '../assets/images/Tattly.webp'
 
 
 const WorkItem = (props) => {
-    const {title, des, color, id, link} = props
+    const {title, des, color, id, link, repo} = props
     const images = [pokecard, pokedex, booking, tattly]
     return (
         <div className='work__item' style={{backgroundColor: color}}>
@@ -19,6 +19,11 @@ const WorkItem = (props) => {
                 <div className="work__description">
                     <h3>{title}</h3>
                     <p>{des}</p>
+                    <div className="work__repo">
+                        <a href={repo} target='__blank'>
+                            Repository
+                        </a>
+                    </div>
                 </div>
             </div>
             
