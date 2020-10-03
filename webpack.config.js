@@ -22,7 +22,8 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './public/index.html',
-            inject: true
+            inject: true,
+            favicon: './public/favicon-16x16.png'
         }),
         new MiniCssExtractPlugin({
             filename:'[name].css'
