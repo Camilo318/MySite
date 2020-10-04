@@ -13,7 +13,12 @@ const WorkItem = (props) => {
             <div className="work__inner">
                 <div className="work__img">
                     <a href={link} target='__blank'>
-                        <img src={images[id - 1]} alt={`${title} sample`}/>
+                        <img
+                        src={images[id - 1]}
+                        alt={`${title}`}
+                        loading="lazy"
+                        />
+
                     </a>
                 </div>
                 <div className="work__description">
