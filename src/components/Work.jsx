@@ -6,7 +6,7 @@ const Work = () => {
     const works = data()
 
     return (
-        <section className='work' id='work'>
+        <section className='work'>
             <h2>My Work</h2>
             <div className="work__container">
                 {works.map(work => {

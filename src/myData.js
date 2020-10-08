@@ -12,7 +12,7 @@ const data = () => {
             title: 'Poke Hunt',
             des: 'Oh boy! I kinda hit it out the park with this one. It is a SPA made with ReactJS and Redux, so it is blazing fast and super responsive. See stats, keep track of your pokemons and more! ',
             id: 2,
-            color: '#5026a7',
+            color: '#6f4a8e',
             link: 'https://pokehunt.netlify.app/#/',
             repo: 'https://github.com/Camilo318/PokeHunt'
         },
@@ -20,17 +20,17 @@ const data = () => {
             title: 'Movie Seat Picker',
             des: 'A very simple UI for picking seats in the cinema. Every movie has its own seats with selected, occupied and free options.',
             id: 3,
-            color: '#42b883',
+            color: '#00587a',
             link: 'https://movie-seat-app.netlify.app/',
             repo: 'https://github.com/Camilo318/MovieSeatBooking'
         },
         {
-            title: 'Tattly',
-            des: 'Fake tattoos by real artists. A very cool page for a tatto company with a very clean and responsive design',
+            title: 'Blohsh Books',
+            des: 'My first FullStack Wep App. Using Express and MongoDB to create a data base that stores all the books you add on the client side in real time',
             id: 4,
-            color: '#ffaa71',
-            link: 'https://tattly.netlify.app/',
-            repo: 'https://github.com/Camilo318/TattlyPage'
+            color: '#41aea9',
+            link: 'https://blohsh-books.herokuapp.com/',
+            repo: 'https://github.com/Camilo318/Blohsh-Books'
         }
     ]
 
