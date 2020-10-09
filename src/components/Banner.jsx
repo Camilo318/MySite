@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Doraemon from '../assets/images/doraemon.webp'
+import Doraemon from '../assets/images/webp/doraemon.webp'
 import twitter from '../assets/images/Twitter.svg'
 import link from '../assets/images/Link.svg'
 import github from '../assets/images/GitHub.png'

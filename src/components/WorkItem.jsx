@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
-import pokedex from '../assets/images/pokehunt.webp'
-import pokecard from '../assets/images/Pokemon-Card.webp'
-import booking from '../assets/images/Booking.webp'
-import tattly from '../assets/images/Tattly.webp'
+
+import ImgWithFallback from './ImgWithFallback'
+import Images from '../Images'
 
 
 const WorkItem = (props) => {
     const {title, des, color, id, link, repo} = props
-    const images = [pokecard, pokedex, booking, tattly]
     const el = useRef(null)
     const [show, setShow] = useState(false)
 
@@ -32,9 +30,11 @@ const WorkItem = (props) => {
             <div className="work__inner">
                 <div className="work__img">
                     <a href={link} target='__blank'>
-                        <img
-                        src={images[id - 1]}
-                        alt={title}/>
+                        <ImgWithFallback
+                            src={Images[id - 1].src}
+                            fallback={Images[id - 1].fallback}
+                            alt='Project view'
+                        />
                     </a>
                 </div>
                 <div className="work__description">
