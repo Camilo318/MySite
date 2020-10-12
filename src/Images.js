@@ -7,11 +7,13 @@ import blohshBooksFallback from './assets/images/png/BlohshBooks.png'
 import seatMovie from './assets/images/webp/SeatMovie.webp'
 import seatMovieFallback from './assets/images/png/SeatMovie.png'
 
+import pokeCard from './assets/images/webp/PokeCard.webp'
+import pokeCardFallback from './assets/images/png/PokeCard.png'
 
 const Images = [ //Array of static pictures
     {
-        src: pokeHunt,
-        fallback: pokeHuntFallback
+        src: pokeCard,
+        fallback: pokeCardFallback
     },
     {
         src: pokeHunt,
