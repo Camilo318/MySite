@@ -41,7 +41,8 @@ const About = () => {
             <Header />
             <section className="about">
                 <div className="about__bg" ref={aboutBg}></div>
-                <div className="about__bg--addition" ref={aboutBgAddition}></div>
+                <div className="about__bg--addition"
+                ref={aboutBgAddition}></div>
 
                 <div className="about__container">
                     <h2 ref={aboutH2}>
@@ -54,7 +55,7 @@ const About = () => {
                             </span>
                         </div>
                         <div ref={line2}>
-                            <span >
+                            <span>
                                 I strongly believe that technology is shaping our society, that's the reason why I don't simply consume it but also create it.
                             </span>
                         </div>

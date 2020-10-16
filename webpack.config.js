@@ -19,10 +19,7 @@ module.exports = {
     
     optimization: {
         minimize: true,
-        minimizer: [new TerserPlugin({
-            test: /\.(js|jsx)$/i,
-            exclude: /node_modules/
-        })]
+        minimizer: [new TerserPlugin()]
     },
 
     devServer: {

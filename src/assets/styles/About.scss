@@ -46,6 +46,7 @@
         overflow: hidden;
         div {
             margin-bottom: 0.75rem;
+            visibility: hidden;
         }
     }
     @media (min-width: 768px) {
