@@ -1,9 +1,7 @@
 .work__item {
     border-radius: 8px;
-    transition: all 0.3s;
-    &:hover {
-        transform: translateY(-10px);
-    }
+    visibility: hidden;
+    min-height: 500px;
 }
 
 .work__inner {
@@ -15,7 +13,7 @@
         padding: 25px;
     }
 }
-@keyframes fadeIn {
+@keyframes lazy {
     from {
         opacity: 0;
         filter: blur((5px));
@@ -27,10 +25,10 @@
 }
 .work__img {
     flex: 1;
-    transition: all 0.3s;
-    animation: fadeIn 1s ease;
+    animation: lazy 1s ease;
+    transition: transform 0.3s;
     &:hover {
-        transform: translateY(-8px);
+        transform: scale(0.95);
     }
     img {
         width: 100%;

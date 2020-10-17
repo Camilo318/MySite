@@ -9,21 +9,42 @@ const WorkItem = (props) => {
     const el = useRef(null)
     const [show, setShow] = useState(false)
 
+    const fadeIn = element => {
+        gsap.from(element, {
+            autoAlpha: 0,
+            opacity: 0,
+            duration: 1,
+            y: 100,
+            ease: 'power3.inOut',
+        })
+    }
+
+    const fadeOut = element => {
+        gsap.to(element, {
+            opacity: 0,
+            autoAlpha: 1,
+            duration: 1,
+            y: -100,
+            ease: 'power3.inOut'
+        })
+    }
+
     useEffect(() => {
-        const observer = new window.IntersectionObserver(entry => {
-            const { isIntersecting } = entry[0]
-            if (isIntersecting) {
+        const observer = new IntersectionObserver(entry => {
+            const { intersectionRatio } = entry[0]
+            if (intersectionRatio > 0.5) {
+                console.log('Show!')
+                fadeIn(el.current)
                 setShow(true)
                 observer.disconnect()
             }
-        })
+        }, { threshold: 0.5})
         observer.observe(el.current)
     }, [el])
 
-
-
     return (
-        <div className='work__item'
+        <div
+        className='work__item'
         style={{backgroundColor: color}}
         ref={el}>
             {show && <>
