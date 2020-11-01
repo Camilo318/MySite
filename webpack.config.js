@@ -9,7 +9,6 @@ const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
     mode: process.env.NODE_ENV,
-    devtool: 'inline-source-map',
     entry: './src/index.js',
     output: {
         filename: 'main.js',

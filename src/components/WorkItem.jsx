@@ -31,6 +31,7 @@ const WorkItem = (props) => {
 
     useEffect(() => {
         const observer = new IntersectionObserver(entry => {
+            console.log(entry[0].intersectionRatio)
             const { intersectionRatio } = entry[0]
             if (intersectionRatio > 0.5) {
                 console.log('Show!')
@@ -52,8 +53,8 @@ const WorkItem = (props) => {
                 <div className="work__img">
                     <a href={link} target='__blank'>
                         <ImgWithFallback
-                            src={Images[id - 1].src}
-                            fallback={Images[id - 1].fallback}
+                            src={Images[id].src}
+                            fallback={Images[id].fallback}
                             alt='Project view'
                         />
                     </a>

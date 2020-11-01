@@ -9,7 +9,9 @@ const Work = () => {
         <section className='work'>
             <h2>My Work</h2>
             <div className="work__container">
-                {works.map(work => {
+                {works
+                .sort((a,b) => a.id - b.id)
+                .map(work => {
                     return (
                         <WorkItem {...work} key={work.id}/>
                     )

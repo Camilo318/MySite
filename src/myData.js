@@ -3,11 +3,20 @@ const data = () => {
         {
             title: 'Pokemon Card Game',
             des: 'A fun memory game made with HTML/CSS and Vanilla JS. OOP approach was used to create all the logic behind. Catching pokemons has never been so much fun!',
-            id: 1,
+            id: 3,
             color: '#ea5455',
             link: 'https://pokecardgame.netlify.app/',
             repo: 'https://github.com/Camilo318/PokemonCardGame'
         },
+        {
+            title: 'Blohsh Notes',
+            des: 'The MERN stack on all its glory. An app to create, edit and delete your notes. It uses JWT as the authorization mechanism. MongoDB stores the users and the notes, so the info is never exposed ',
+            id: 1,
+            color: '#f6830f',
+            link: 'https://blohsh-notes.herokuapp.com/',
+            repo: 'https://github.com/Camilo318/BlohshNotes'
+        },
+
         {
             title: 'Poke Hunt',
             des: 'Oh boy! I kinda hit it out the park with this one. It is a SPA made with ReactJS and Redux, so it is blazing fast and super responsive. See stats, keep track of your pokemons and more! ',
@@ -19,7 +28,7 @@ const data = () => {
         {
             title: 'Movie Seat Picker',
             des: 'A very simple UI for picking seats in the cinema. Every movie has its own seats with selected, occupied and free options.',
-            id: 3,
+            id: 5,
             color: '#00587a',
             link: 'https://movie-seat-app.netlify.app/',
             repo: 'https://github.com/Camilo318/MovieSeatBooking'

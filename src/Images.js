@@ -10,24 +10,34 @@ import seatMovieFallback from './assets/images/png/SeatMovie.png'
 import pokeCard from './assets/images/webp/PokeCard.webp'
 import pokeCardFallback from './assets/images/png/PokeCard.png'
 
-const Images = [ //Array of static pictures
-    {
-        src: pokeCard,
-        fallback: pokeCardFallback
-    },
-    {
-        src: pokeHunt,
-        fallback: pokeHuntFallback
-    },
-    {
-        src: seatMovie,
-        fallback: seatMovieFallback
-    },
-    {
-        src: blohshBooks,
-        fallback: blohshBooksFallback
-    },
-    
-]
+import blohshNotes from './assets/images/webp/BlohshNotes.webp'
+import blohshNotesFallback from './assets/images/png/BlohshNotes.png'
 
+const Images =  //Array of static pictures
+    {
+        '1': {
+            src: blohshNotes,
+            fallback: blohshNotesFallback
+        },
+
+        '3': {
+            src: pokeCard,
+            fallback: pokeCardFallback
+        },
+
+        '2': {
+            src: pokeHunt,
+            fallback: pokeHuntFallback
+        },
+
+        '5': {
+            src: seatMovie,
+            fallback: seatMovieFallback
+        },
+
+        '4': {
+            src: blohshBooks,
+            fallback: blohshBooksFallback
+        }
+    }
 export default Images
