@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import WorkItem from './WorkItem'
 import data from '../myData'
 import doraemon from '../assets/images/webp/giphy.webp'
 
 const Work = () => {
     const works = data()
+    const novita = useRef(null)
+    const fadeIn = el => {
+        gsap.from(el, {
+            autoAlpha: 0,
+            opacity: 0,
+            y: -100,
+            duration: 1,
+            ease: 'bounce'
+        })
+    }
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entry => {
+            const { intersectionRatio } = entry[0]
+            if (intersectionRatio > 0.7) {
+                fadeIn(novita.current)
+                observer.disconnect()
+            }
+        }, { threshold: 0.7 })
+        observer.observe(novita.current)
+    })
 
     return (
         <section className='work'>
@@ -18,7 +39,7 @@ const Work = () => {
                     )
                 })}
             </div> 
-            <div className='doraemon'>
+            <div className='doraemon' ref={novita}>
                 <h3>
                     Even more cool stuff is coming from doraemon's pocket, stay tuned
                 </h3>

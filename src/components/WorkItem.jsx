@@ -14,7 +14,7 @@ const WorkItem = (props) => {
             autoAlpha: 0,
             opacity: 0,
             duration: 1,
-            y: 100,
+            y: -50,
             ease: 'power3.inOut',
         })
     }
