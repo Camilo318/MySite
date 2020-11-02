@@ -11,6 +11,23 @@
     }
 }
 
+.doraemon {
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    h3 {
+        text-align: center;
+        padding: 15px;
+        color: var(--text-color);
+        font-family: 'Space Mono';
+        @media (min-width: 768px) {
+            padding: 15px 30px;
+        }
+    }
+}
+
 .work__container {
     width: 100%;
     max-width: 1200px;

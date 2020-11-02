@@ -1,6 +1,7 @@
 import React from 'react'
 import WorkItem from './WorkItem'
 import data from '../myData'
+import doraemon from '../assets/images/webp/giphy.webp'
 
 const Work = () => {
     const works = data()
@@ -17,6 +18,12 @@ const Work = () => {
                     )
                 })}
             </div> 
+            <div className='doraemon'>
+                <h3>
+                    Even more cool stuff is coming from doraemon's pocket, stay tuned
+                </h3>
+                <img src={doraemon} alt="Doraemon"/>
+            </div>
         </section>
     )
 }
