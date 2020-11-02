@@ -7,7 +7,7 @@ import Images from '../Images'
 const WorkItem = (props) => {
     const {title, des, color, id, link, repo} = props
     const el = useRef(null)
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(true)
 
     const fadeIn = element => {
         gsap.from(element, {
@@ -36,7 +36,6 @@ const WorkItem = (props) => {
             if (intersectionRatio > 0.7) {
                 console.log('Show!')
                 fadeIn(el.current)
-                setShow(true)
                 observer.disconnect()
             }
         }, { threshold: 0.7})
