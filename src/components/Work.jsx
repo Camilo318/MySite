@@ -19,11 +19,11 @@ const Work = () => {
     useEffect(() => {
         const observer = new IntersectionObserver(entry => {
             const { intersectionRatio } = entry[0]
-            if (intersectionRatio > 0.7) {
+            if (intersectionRatio > 0.9) {
                 fadeIn(novita.current)
                 observer.disconnect()
             }
-        }, { threshold: 0.7 })
+        }, { threshold: 0.9 })
         observer.observe(novita.current)
     })
 

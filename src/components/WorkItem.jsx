@@ -14,8 +14,8 @@ const WorkItem = (props) => {
             autoAlpha: 0,
             opacity: 0,
             duration: 1,
-            y: -50,
-            ease: 'power3.inOut',
+            y: 50,
+            ease: 'bounce',
         })
     }
 
@@ -33,13 +33,13 @@ const WorkItem = (props) => {
         const observer = new IntersectionObserver(entry => {
             console.log(entry[0].intersectionRatio)
             const { intersectionRatio } = entry[0]
-            if (intersectionRatio > 0.5) {
+            if (intersectionRatio > 0.7) {
                 console.log('Show!')
                 fadeIn(el.current)
                 setShow(true)
                 observer.disconnect()
             }
-        }, { threshold: 0.5})
+        }, { threshold: 0.7})
         observer.observe(el.current)
     }, [el])
 
