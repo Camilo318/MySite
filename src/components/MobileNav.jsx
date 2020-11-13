@@ -40,7 +40,7 @@ const MobileNav = ({isOpen, setMenu}) => {
                         </Link>
                     </li>
                     <li>
-                        <a href="https://drive.google.com/file/d/1PB9ZM8wDjlrmMWG17P60QXCwUPsnxA7s/view?usp=sharing" target='__blank' onClick={closeMenu}>
+                        <a href="https://drive.google.com/file/d/11XwuoGN4BABLUWxkhZKSGMwEk2hLxGfF/view?usp=sharing" target='__blank' onClick={closeMenu}>
                             Resume
                         </a>
                     </li>

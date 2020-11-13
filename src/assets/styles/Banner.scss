@@ -1,8 +1,8 @@
 .banner {
     position: relative;  //wrap the banner
-    height: 90vh;
+    min-height: 80vh;
     display: flex;
-    align-items: center;
+    // align-items: center;
     background-color: var(--primary-color);
 }
 
@@ -15,6 +15,7 @@
     color: var(--text-color);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     @media (min-width: 768px) {
         padding: 15px 30px;
         flex-direction: row;
@@ -38,34 +39,32 @@
 
 .banner__inner {
     order: 1;
+    flex-basis: auto;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     @media (min-width: 768px) {
-        width: 50%;
         order: 0;
+        flex-basis: 60%;
+
     }
     h1 {
+        margin: 0;
         visibility: hidden;
         font-family: 'Space Mono';
-        margin: 1rem 0;
         @media (min-width: 900px) {
             font-size: 3rem;
         }
     }
     h3 {
         visibility: hidden;
+        margin: 0.5rem 0 1rem;
         font-family: 'Poppins';
         font-weight: 400;
         @media (min-width: 768px) {
             font-size: 1.3rem;
         }
-    }
-    p {
-        font-family: 'Poppins';
-        font-weight: 300;
-        font-size: 0.875rem;
     }
     .social {
         visibility: hidden;
@@ -83,9 +82,11 @@
 }
 
 .banner__image {
+    margin-top: 6rem;
     visibility: hidden;
     position: relative;
-    width: 40%;
+    flex-basis: 30%;
+    max-width: 245px;
     align-self: center;
     img {
         width: 100%;

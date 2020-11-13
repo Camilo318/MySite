@@ -38,7 +38,7 @@ const Header = () => {
                                 <Link to="/about">About</Link>
                             </li>
                             <li>
-                                <a href="https://drive.google.com/file/d/1PB9ZM8wDjlrmMWG17P60QXCwUPsnxA7s/view?usp=sharing" target='__blank'>
+                                <a href="https://drive.google.com/file/d/11XwuoGN4BABLUWxkhZKSGMwEk2hLxGfF/view?usp=sharing" target='__blank'>
                                     Resume
                                 </a>
                             </li>
