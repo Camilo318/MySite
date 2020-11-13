@@ -1,6 +1,6 @@
 .banner {
     position: relative;  //wrap the banner
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     // align-items: center;
     background-color: var(--primary-color);
@@ -82,12 +82,15 @@
 }
 
 .banner__image {
-    margin-top: 6rem;
+    margin-top: 5rem;
     visibility: hidden;
     position: relative;
     flex-basis: 30%;
-    max-width: 245px;
+    max-width: 150px;
     align-self: center;
+    @media (min-width: 425px) {
+        max-width: 245px;
+    }
     img {
         width: 100%;
         height: auto;

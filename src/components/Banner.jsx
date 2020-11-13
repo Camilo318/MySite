@@ -36,7 +36,6 @@ const Banner = () => {
             delay: 0.2,
             duration: 0.9,
             y:80,
-            opacity: 0,
             stagger: {
                 amount: 0.3
             },
@@ -46,17 +45,13 @@ const Banner = () => {
         gsap.from(Image.current, {
             autoAlpha:0,
             x: 100,
-            opacity: 0,
             duration: 0.8,
             ease: 'power3.in',
             delay: 1.5
         })
 
         Draggable.create(".banner__image", {
-            type: "x,y",
-            bounds: bannerBg.current,
-            onClick: () => console.log('Billie'),
-            onDragEnd: () => console.log('Eilish')
+            type: "x,y"
         })
     }, [])
 
