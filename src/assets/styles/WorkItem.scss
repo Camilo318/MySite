@@ -5,20 +5,18 @@
 }
 
 .work__inner {
-    padding: 15px;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
-    @media (min-width: 768px) {
-        padding: 25px;
-    }
+    overflow: hidden;
 }
 
 .work__img {
     flex: 1;
-    transition: transform 0.3s;
+    transition: 0.3s ease;
+    filter: opacity(0.9) contrast(0.9);
     &:hover {
-        transform: scale(0.95);
+     filter: opacity(1) contrast(1);  
     }
     img {
         width: 100%;
@@ -27,14 +25,17 @@
 }
 .work__description {
     flex: 1;
+    padding: 15px;
     font-size: 1rem;
     @media (min-width: 768px) {
         font-size: 1.1rem;
+        padding: 25px;
     }
     h3 {
         font-family: 'Space Mono';
         font-size: 1.5em;
         margin: 1rem 0;
+        margin-top: 0;
 
     }
     p {
