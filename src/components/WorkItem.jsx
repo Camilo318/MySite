@@ -12,9 +12,9 @@ const WorkItem = (props) => {
     const fadeIn = element => {
         gsap.from(element, {
             autoAlpha: 0,
-            duration: 1,
-            y: 100,
-            ease: 'power3.out',
+            duration: 0.8,
+            y: -100,
+            ease: 'elastic.out',
         })
     }
 

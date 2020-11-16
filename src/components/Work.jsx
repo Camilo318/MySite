@@ -11,7 +11,7 @@ const Work = () => {
             autoAlpha: 0,
             y: -100,
             duration: 1,
-            ease: 'bounce'
+            ease: 'elastic'
         })
     }
 
