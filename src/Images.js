@@ -12,6 +12,8 @@ import pokeCardFallback from './assets/images/png/PokeCard.png'
 
 import blohshNotes from './assets/images/webp/BlohshNotes.webp'
 import blohshNotesFallback from './assets/images/png/BlohshNotes.png'
+import bataBit from './assets/images/webp/Bata-bit.webp'
+import bataBitFallback from './assets/images/png/Bata-bit.png'
 
 const Images =  //Array of static pictures
     {
@@ -19,7 +21,11 @@ const Images =  //Array of static pictures
             src: blohshNotes,
             fallback: blohshNotesFallback
         },
-
+        '6': {
+            src: bataBit,
+            fallback: bataBitFallback
+        }
+        ,
         '3': {
             src: pokeCard,
             fallback: pokeCardFallback

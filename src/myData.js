@@ -1,10 +1,18 @@
 const data = () => {
     const works = [
         {
+            title: 'Bata-bit',
+            des: 'A landing page for a real start up. Made with the latest  toys from React and gsap to compose subtle but appealing animations throughout the website. Responsive and stunning',
+            id: 6,
+            color: '#ee6f57',
+            link: 'https://bata-bit.netlify.app/',
+            repo: 'https://github.com/Camilo318/Batata-Bit'
+        },
+        {
             title: 'Pokemon Card Game',
             des: 'A fun memory game made with HTML/CSS and Vanilla JS. OOP approach was used to create all the logic behind. Catching pokemons has never been so much fun!',
             id: 3,
-            color: '#ea5455',
+            color: '#41aea9',
             link: 'https://pokecardgame.netlify.app/',
             repo: 'https://github.com/Camilo318/PokemonCardGame'
         },
@@ -21,7 +29,7 @@ const data = () => {
             title: 'Poke Hunt',
             des: 'Oh boy! I kinda hit it out the park with this one. It is a SPA made with ReactJS and Redux, so it is blazing fast and super responsive. See stats, keep track of your pokemons and more! ',
             id: 2,
-            color: '#6f4a8e',
+            color: '#1d2d50',
             link: 'https://pokehunt.netlify.app/#/',
             repo: 'https://github.com/Camilo318/PokeHunt'
         },
@@ -37,7 +45,7 @@ const data = () => {
             title: 'Blohsh Books',
             des: 'My first FullStack Wep App. Using Express and MongoDB to create a data base that stores all the books you add on the client side in real time',
             id: 4,
-            color: '#41aea9',
+            color: '#7579e7',
             link: 'https://blohsh-books.herokuapp.com/',
             repo: 'https://github.com/Camilo318/Blohsh-Books'
         }
