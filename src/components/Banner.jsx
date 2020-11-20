@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Doraemon from '../assets/images/webp/doraemon.webp'
-import twitter from '../assets/images/Twitter.svg'
-import link from '../assets/images/Link.svg'
-import github from '../assets/images/GitHub.png'
+import twitter from '../assets/images/gorjeo.svg'
+import link from '../assets/images/linkedin.svg'
+import github from '../assets/images/github.svg'
 
 const Banner = () => {
     const bannerBg = useRef(null)
