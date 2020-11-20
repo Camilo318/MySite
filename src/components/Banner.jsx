@@ -81,7 +81,8 @@ const Banner = () => {
                         target='__blank'>
                             <img src={github} alt="twitter"/>
                         </a>
-                        <a href="">
+                        <a href="https://linkedin.com/in/camilo-perilla-niño"
+                        target='__blank'>
                             <img src={link} alt="link"/>
                         </a>
                         <a href="https://twitter.com/GlutenFree318"
