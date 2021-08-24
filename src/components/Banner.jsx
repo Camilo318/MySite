@@ -8,7 +8,7 @@ const Banner = () => {
   const bannerBg = useRef(null)
   const bannerBgAddition = useRef(null)
   const bannerH1 = useRef(null)
-  const bannerH3 = useRef(null)
+  const bannerH2 = useRef(null)
   const bannerSocial = useRef(null)
   const Image = useRef(null)
   const bannerTL = gsap.timeline()
@@ -19,7 +19,7 @@ const Banner = () => {
         [bannerBg.current, bannerBgAddition.current],
         {
           width: 0,
-          skewX: 4,
+          skewX: 4
         },
         {
           skewX: 0,
@@ -27,21 +27,21 @@ const Banner = () => {
           ease: 'power3.inOut',
           duration: 1.2,
           stagger: {
-            amount: 0.2,
-          },
+            amount: 0.2
+          }
         }
       )
       .from(
-        [bannerH1.current, bannerH3.current, bannerSocial.current],
+        [bannerH1.current, bannerH2.current, bannerSocial.current],
         {
           autoAlpha: 0,
           delay: 0.2,
           duration: 0.9,
           y: 80,
           stagger: {
-            amount: 0.3,
+            amount: 0.3
           },
-          ease: 'power3.out',
+          ease: 'power3.out'
         }
       )
 
@@ -50,11 +50,11 @@ const Banner = () => {
       x: 100,
       duration: 0.8,
       ease: 'power3.in',
-      delay: 1.5,
+      delay: 1.5
     })
 
     Draggable.create('.banner__image', {
-      type: 'x,y',
+      type: 'x,y'
     })
   }, [])
 
@@ -63,41 +63,37 @@ const Banner = () => {
       <div className='banner__bg' ref={bannerBg}></div>
       <div
         className='banner__bg--addition'
-        ref={bannerBgAddition}
-      ></div>
+        ref={bannerBgAddition}></div>
 
       <div className='banner__container'>
         <div className='banner__inner'>
           <h1 ref={bannerH1}>Hey, I am Camilo</h1>
-          <h3 ref={bannerH3}>
+          <h2 ref={bannerH2}>
             I build Web Apps that deliver amazing experiences. And
-            yes, you saw right, that is flying Doraemon. Try to move
+            yes, you saw right, that is a flying Doraemon. Try to move
             it around
-          </h3>
+          </h2>
 
           <div className='social' ref={bannerSocial}>
             <a href='https://github.com/Camilo318' target='__blank'>
-              <img src={github} alt='twitter' />
+              <img src={github} alt="Camilo's github" />
             </a>
             <a
               href='https://linkedin.com/in/camilo-perilla-niño'
-              target='__blank'
-            >
-              <img src={link} alt='link' />
+              target='__blank'>
+              <img src={link} alt="Camilo's linkedin" />
             </a>
             <a
               href='https://twitter.com/GlutenFree318'
-              target='__blank'
-            >
-              <img src={twitter} alt='link' />
+              target='__blank'>
+              <img src={twitter} alt="Camilo's twitter" />
             </a>
           </div>
         </div>
         <div className='banner__image' ref={Image}>
           <img
             src={Doraemon}
-            alt='Doraemon'
-            title='Doraemon is the best thing ever!'
+            alt='Little Doraemon flying on the website'
           />
         </div>
       </div>

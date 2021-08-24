@@ -1,102 +1,103 @@
 .banner {
-    position: relative;  //wrap the banner
-    min-height: 85vh;
-    display: flex;
-    // align-items: center;
-    background-color: var(--primary-color);
+  position: relative; //wrap the banner
+  min-height: 85vh;
+  display: flex;
+  // align-items: center;
+  background-color: var(--primary-color);
 }
 
 .banner__container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px;
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @media (min-width: 768px) {
-        padding: 15px 30px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (min-width: 768px) {
+    padding: 15px 30px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-.banner__bg, .banner__bg--addition {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color:slateblue;
+.banner__bg,
+.banner__bg--addition {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: slateblue;
 }
 
 .banner__bg--addition {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
-
 .banner__inner {
-    order: 1;
-    flex-basis: auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  order: 1;
+  flex-basis: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (min-width: 768px) {
+    order: 0;
+    flex-basis: 60%;
+  }
+  h1 {
+    margin: 0;
+    visibility: hidden;
+    font-family: 'Space Mono';
+    @media (min-width: 900px) {
+      font-size: 3rem;
+    }
+  }
+  h2 {
+    visibility: hidden;
+    margin: 0.5rem 0 1rem;
+    font-family: 'Poppins';
+    font-weight: 400;
     @media (min-width: 768px) {
-        order: 0;
-        flex-basis: 60%;
-
+      font-size: 1.3rem;
     }
-    h1 {
-        margin: 0;
-        visibility: hidden;
-        font-family: 'Space Mono';
-        @media (min-width: 900px) {
-            font-size: 3rem;
-        }
+  }
+  .social {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      margin-right: 1.5rem;
+      &:hover img {
+        transform: translateY(-8px);
+      }
+      img {
+        display: block;
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s;
+      }
     }
-    h3 {
-        visibility: hidden;
-        margin: 0.5rem 0 1rem;
-        font-family: 'Poppins';
-        font-weight: 400;
-        @media (min-width: 768px) {
-            font-size: 1.3rem;
-        }
-    }
-    .social {
-        visibility: hidden;
-        display: flex;
-        align-items: center;
-        a {
-            text-decoration: none;
-            margin-right: 1.5rem;
-            transition: all 0.3s;
-            &:hover {
-                transform: translateY(-8px);
-            }
-            img {
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
+  }
 }
 
 .banner__image {
-    margin-top: 5rem;
-    visibility: hidden;
-    position: relative;
-    flex-basis: 30%;
-    max-width: 150px;
-    align-self: center;
-    @media (min-width: 425px) {
-        max-width: 245px;
-    }
-    img {
-        width: 100%;
-        height: auto;
-    }
+  margin-top: 5rem;
+  visibility: hidden;
+  position: relative;
+  flex-basis: 30%;
+  max-width: 150px;
+  align-self: center;
+  @media (min-width: 425px) {
+    max-width: 245px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
