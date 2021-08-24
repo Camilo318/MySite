@@ -3,34 +3,23 @@ import React, { useEffect, useRef, useState } from 'react'
 import ImgWithFallback from './ImgWithFallback'
 import Images from '../Images'
 
-const WorkItem = (props) => {
+const WorkItem = props => {
   const { title, des, color, id, link, repo } = props
   const el = useRef(null)
-  const [show, setShow] = useState(true)
 
-  const fadeIn = (element) => {
+  const fadeIn = element => {
     gsap.from(element, {
       autoAlpha: 0,
       duration: 1.2,
       y: -100,
-      ease: 'elastic.out',
-    })
-  }
-
-  const fadeOut = (element) => {
-    gsap.to(element, {
-      opacity: 0,
-      autoAlpha: 1,
-      duration: 1,
-      y: -100,
-      ease: 'power3.inOut',
+      ease: 'elastic.out'
     })
   }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entry) => {
-        console.log(entry[0].intersectionRatio)
+      entry => {
+        console.log(entry)
         const { intersectionRatio } = entry[0]
         if (intersectionRatio > 0.7) {
           console.log('Show!')
@@ -47,32 +36,27 @@ const WorkItem = (props) => {
     <div
       className='work__item'
       style={{ backgroundColor: color }}
-      ref={el}
-    >
-      {show && (
-        <>
-          <div className='work__inner'>
-            <div className='work__img'>
-              <a href={link} target='__blank'>
-                <ImgWithFallback
-                  src={Images[id].src}
-                  fallback={Images[id].fallback}
-                  alt='Project view'
-                />
-              </a>
-            </div>
-            <div className='work__description'>
-              <h3>{title}</h3>
-              <p>{des}</p>
-              <div className='work__repo'>
-                <a href={repo} target='__blank'>
-                  Repository
-                </a>
-              </div>
-            </div>
+      ref={el}>
+      <div className='work__inner'>
+        <div className='work__img'>
+          <a href={link} target='__blank'>
+            <ImgWithFallback
+              src={Images[id].src}
+              fallback={Images[id].fallback}
+              alt='Project view'
+            />
+          </a>
+        </div>
+        <div className='work__description'>
+          <h3>{title}</h3>
+          <p>{des}</p>
+          <div className='work__repo'>
+            <a href={repo} target='__blank'>
+              Repository
+            </a>
           </div>
-        </>
-      )}
+        </div>
+      </div>
     </div>
   )
 }

@@ -5,19 +5,19 @@ import doraemon from '../assets/images/webp/giphy.webp'
 
 const Work = () => {
   const works = data()
-  const novita = useRef(null)
-  const fadeIn = (el) => {
+  const doraemonRef = useRef(null)
+  const fadeIn = el => {
     gsap.from(el, {
       autoAlpha: 0,
       y: -100,
       duration: 1,
-      ease: 'elastic',
+      ease: 'elastic'
     })
   }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entry) => {
+      entry => {
         const { intersectionRatio } = entry[0]
         if (intersectionRatio > 0.9) {
           fadeIn(novita.current)
@@ -26,7 +26,7 @@ const Work = () => {
       },
       { threshold: 0.9 }
     )
-    observer.observe(novita.current)
+    observer.observe(doraemonRef.current)
   })
 
   return (
@@ -35,11 +35,11 @@ const Work = () => {
       <div className='work__container'>
         {works
           .sort((a, b) => a.id - b.id)
-          .map((work) => {
+          .map(work => {
             return <WorkItem {...work} key={work.id} />
           })}
       </div>
-      <div className='doraemon' ref={novita}>
+      <div className='doraemon' ref={doraemonRef}>
         <h3>
           Even more cool stuff is coming from doraemon's pocket, stay
           tuned
