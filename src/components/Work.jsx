@@ -20,7 +20,7 @@ const Work = () => {
       entry => {
         const { intersectionRatio } = entry[0]
         if (intersectionRatio > 0.9) {
-          fadeIn(novita.current)
+          fadeIn(doraemonRef.current)
           observer.disconnect()
         }
       },
