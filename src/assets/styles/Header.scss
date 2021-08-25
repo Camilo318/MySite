@@ -46,6 +46,11 @@ header {
       &:hover a {
         transform: translateY(-5px);
       }
+      &:focus-within a {
+        outline: 2px solid slateblue;
+        outline-offset: 4px;
+        transform: translateY(-5px);
+      }
       a {
         color: var(--text-color);
         text-decoration: none;
