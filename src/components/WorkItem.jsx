@@ -18,11 +18,9 @@ const WorkItem = props => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      entry => {
-        console.log(entry)
-        const { intersectionRatio } = entry[0]
+      (entries, observer) => {
+        const { intersectionRatio } = entries[0]
         if (intersectionRatio > 0.7) {
-          console.log('Show!')
           fadeIn(el.current)
           observer.disconnect()
         }

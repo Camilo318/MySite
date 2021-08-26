@@ -17,8 +17,8 @@ const Work = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      entry => {
-        const { intersectionRatio } = entry[0]
+      (entries, observer) => {
+        const { intersectionRatio } = entries[0]
         if (intersectionRatio > 0.9) {
           fadeIn(doraemonRef.current)
           observer.disconnect()
