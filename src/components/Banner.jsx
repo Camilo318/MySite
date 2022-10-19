@@ -83,11 +83,6 @@ const Banner = () => {
               target='__blank'>
               <img src={link} alt="Camilo's linkedin" />
             </a>
-            <a
-              href='https://twitter.com/GlutenFree318'
-              target='__blank'>
-              <img src={twitter} alt="Camilo's twitter" />
-            </a>
           </div>
         </div>
         <div className='banner__image' ref={Image}>
