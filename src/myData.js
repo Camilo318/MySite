@@ -18,11 +18,11 @@ const data = () => {
     },
     {
       title: 'Blohsh Notes',
-      des: 'The MERN stack on all its glory. An app to create, edit and delete your notes. It uses JWT as the authorization mechanism. MongoDB stores the users and the notes, so the info is never exposed ',
+      des: 'Server Actions in all its glory. App to create, edit and delete your notes. Made with Next.14, shadcn/ui, next-auth and drizzle-orm. Fast, secure and responsive full-stack app',
       id: 1,
       color: '#f6830f',
-      link: 'https://blohsh-notes.herokuapp.com/',
-      repo: 'https://github.com/Camilo318/BlohshNotes'
+      link: 'https://blohsh-notes-ssr.vercel.app/',
+      repo: 'https://github.com/Camilo318/blohsh-notes-ssr/tree/main'
     },
 
     {
